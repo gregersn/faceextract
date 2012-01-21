@@ -1,0 +1,21 @@
+Script written to be able to use face detection data from Picasa in Lightroom.
+
+Parses Piacsa files, and writes info into xmp-files.
+
+Before using the script, you need to change some variables to point to the right 
+contacts file and such. You also need the XML library for Perl, and the Perl Exiftool-library installed.
+
+The script has only been tested in Windows 7, with Cygwin.
+
+The procedure goes as follow:
+
+In Picasa, do the face tagging. Check the picasa website for help on that.
+In Lightroom, make sure you select all the pictures you want to update, and write all the metadata to files. Thats from the metadata menu.
+Go to the folder you have some pictures with people in it and run the Perl script.
+Open Lightroom again, select the pictures, and choose to read metadata from files.
+
+It seems to be working okay now, but I take no responsibility for damages it may do to your pictures if you try it. Make sure you have a backup first!
+
+To run the script recursively I use the command:
+	find . -name \.picasa\.ini -execdir ~/scriptlocation/faceextract.pl \;
+
