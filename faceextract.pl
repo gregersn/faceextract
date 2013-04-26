@@ -31,7 +31,7 @@ foreach my $contact (@$conts)
 
 
 # Open and read the picasa file into an array
-open(PICASAFILE, $filename) || die("Could noe open picasafile");
+open(PICASAFILE, $filename) || die("Could not open picasafile: $!");
 my @picasadata = <PICASAFILE>;
 close(PICASAFILE);
 
